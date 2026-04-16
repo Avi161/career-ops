@@ -338,3 +338,93 @@ Write one TSV file per evaluation to `batch/tracker-additions/{num}-{company-slu
 - No markdown bold (`**`) in status field
 - No dates in status field (use the date column)
 - No extra text (use the notes column)
+
+**ABOUT USER**
+# CLAUDE.md -- Context for Claude Code
+
+## Who I am
+
+**Avigya Paudel** -- CS & Math sophomore at Union College (Schenectady, NY). 3.98 GPA cumulative, 4.0 CS. Graduating June 2028.
+
+## What this repo is
+
+A fork of [santifer/career-ops](https://github.com/santifer/career-ops). The repo provides tooling to manage job applications, evaluate JDs against my profile, generate tailored CVs and cover letters, and track outcomes. My personal files live in the `me/` directory to avoid merge conflicts with upstream.
+
+## My dual-track situation
+
+I am targeting **two types of roles simultaneously** (both at intern/fellowship level, not full-time):
+
+### Track 1: ML / AI Research & AI Safety Fellowships
+- NeurIPS 2025 Workshop paper (co-first-author) on sycophancy mitigation via Sparse Activation Fusion and Multi-Layer Activation Steering
+- AI Safety Research Fellow at SPAR & AI Safety Camp (Jan 2026 -- present): linear probes on Qwen3-4B, Contrastive Activation Addition (CAA), temporal horizon representations
+- ML Researcher at Algoverse (May -- Sept 2025): TransformerLens, Sparse Autoencoders, activation steering on Gemma-2-2b-it
+- Undergraduate Research Assistant at Union College (Jan 2025 -- present): Strassen's algorithm, SAT-based tensor rank, matrix multiplication complexity
+- Strong math background: abstract algebra, numerical analysis, probability theory, mathematical statistics
+
+### Track 2: Software Engineering Internships
+- Full-stack projects: CreateStory (Node.js/Express/MongoDB/Socket.IO), WriteLight (hackathon, MongoDB/REST), AI Summarizer Chrome extension (GPT-4o API)
+- FloodNet: multi-modal deep learning with PyTorch (91.5% accuracy flood detection)
+- Languages: Python (daily), C/C++, Java, JavaScript/TypeScript, Swift, SQL
+- Web: React, Node.js, Express, Flask, Tailwind, REST APIs
+- Tools: Git, Docker, MongoDB, MySQL, PostgreSQL, Claude Code
+- Web dev internship at Nobel Navigators (Summer 2024)
+
+### How the two tracks interact
+- For SWE internship applications: emphasize engineering infrastructure inside research (PyTorch hook frameworks, dataset pipelines, multiprocessing test harnesses, eval benchmarks) plus the full-stack projects. Don't lead with sycophancy percentages.
+- For research fellowship applications: lead with NeurIPS paper, SPAR, probing/CAA/MLAS work. Engineering projects become supporting evidence of coding ability.
+- The engineering *inside* the research is genuinely strong and bridges both tracks.
+
+## Repo structure
+
+```
+career-ops/
+├── config/              # canonical schemas from upstream (don't modify)
+│   └── profile.example.yml
+├── examples/            # template examples from upstream (don't modify)
+│   ├── cv-example.md
+│   └── dual-track/      # dual-track example (Sam Rivera) -- use as structural reference
+│       ├── README.md
+│       ├── cv.md
+│       └── profile.yml
+├── modes/               # shared evaluation logic from upstream
+│   └── _shared.md       # where archetypes feed into framing logic
+├── me/                  # MY personal files (this is mine to edit)
+│   ├── cv.md            # ✅ already created and pushed
+│   └── profile.yml      # ⬜ needs to be created
+├── CLAUDE.md            # this file
+└── ...                  # other upstream files
+```
+
+## What still needs to be done
+
+1. **Create `me/profile.yml`** -- Copy from `config/profile.example.yml`, then configure:
+   - Two `fit: primary` archetypes (ml_ai_research at fellowship level, software_engineering at intern level)
+   - Compensation as monthly stipend ranges, not annual salary (SWE interns: $8K-$12K/month at top tier; research fellowships: $2K-$6K/month or sometimes unpaid with stipend)
+   - My contact info, location, education, links
+   - Fill in all other fields the template expects
+
+2. **Review `modes/_shared.md`** -- Understand how archetypes are used during JD evaluation so I can verify the tooling picks the right track for each application.
+
+3. **Set up any additional config** the repo expects (check the main README for setup instructions, environment variables, dependencies, etc.)
+
+4. **Keep `me/` as the only directory I modify.** Everything else is upstream and should stay clean for future `git pull` from santifer/career-ops.
+
+## Key references inside the repo
+
+- `examples/dual-track/README.md` -- explains the dual-track pattern, objection handling, over/underqualified failure modes. READ THIS FIRST for any dual-track decisions.
+- `examples/dual-track/profile.yml` -- example profile.yml with two primary archetypes. Use as structural reference for mine.
+- `examples/dual-track/cv.md` -- Sam Rivera's fictional dual-track CV. My `me/cv.md` already follows this structure.
+- `config/profile.example.yml` -- the canonical schema for profile.yml.
+
+## Important context
+
+- **Honors & awards:** Generation Google Scholar, Union Scholar, Dean's List, Uber Career Prep Fellow, freeCodeCamp Hackathon Winner
+- **Activities:** ICPC Team Member, ACM Member, Math Club, Badminton Club President, Calculus Help Center Tutor (200+ students)
+- **Publication:** Adityo, N.*, Min, P. P.*, Paudel, A.*, Rufail, A.*, Zhu, A.*, Blondin, C., Zhu, K., Dev, S., & O'Brien, S. (2025). Mitigating Sycophancy in Language Models via Sparse Activation Fusion and Multi-Layer Activation Steering. NeurIPS 2025 Workshop on Mechanistic Interpretability. *Equal contribution.
+- **Poster:** Finding Tensor Rank. Union College Undergraduate Summer Research Poster Session, July 2024.
+
+## Style notes
+
+- I am an undergraduate, not a senior engineer. Don't inflate titles or scope.
+- Stipends, not salaries. Internships and fellowships, not full-time roles.
+- Be honest about what's strong (research depth, math, NeurIPS paper at sophomore level) and what's developing (production engineering experience is mostly projects, not industry jobs yet).

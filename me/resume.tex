@@ -1,0 +1,179 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{#1\vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #4} \\
+      \textit{\small#3} & #2 \\
+    \end{tabular*}\vspace{-6pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-6pt}
+}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, label=\textbullet, itemsep=-2pt, topsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Avigya Paudel} \\ \vspace{3pt}
+    \small
+    \href{mailto:avigyapaudel045@gmail.com}{\underline{avigyapaudel045@gmail.com}} $|$
+    \href{https://linkedin.com/in/avigya-paudel-531119306}{\underline{linkedin.com/in/avigya-paudel}} $|$
+    \href{https://github.com/Avi161}{\underline{github.com/Avi161}} $|$
+    \href{https://avigya.vercel.app}{\underline{avigya.vercel.app}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Union College}{Schenectady, NY}
+    {BS Computer Science \& Mathematics; Minor in Statistics \textemdash{} GPA: 3.98/4.0 cumul.\ $|$ CS 4.0/4.0 $|$ Math 3.96/4.0}{Sept 2024 -- June 2028}
+    \resumeItemListStart
+      \resumeItem{\textbf{Honors:} Generation Google Scholar, Union Scholar, Dean's List, Uber Career Prep Fellow}
+      \resumeItem{\textbf{Coursework:} Data Structures, Algorithm Design, Linear Algebra, Probability Theory, Abstract Algebra, Numerical Analysis}
+      \resumeItem{\textbf{Activities:} ICPC Team Member, ACM Member, Mathematics Club}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------RESEARCH EXPERIENCE-----------
+\section{Research Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading{AI Safety Research Fellow}{Remote}
+    {SPAR Research \& AI Safety Camp}{Jan 2026 -- Present}
+    \resumeItemListStart
+      \resumeItem{Trained linear probes on Qwen3-4B residual stream activations across 36 layers; \textbf{99.2\% test accuracy at Layer 26}, confirming linear encoding of temporal horizon without explicit time cues.}
+      \resumeItem{Steered model outputs using Contrastive Activation Addition (CAA); identified Layer 22 as optimal injection point via logprob sweep. Built 800-pair dataset (10 semantic categories) using Claude Opus 4.6 and Gemini 3 Pro as validation agents.}
+    \resumeItemListEnd
+
+  \resumeSubheading{Machine Learning Researcher}{Remote}
+    {Algoverse}{May 2025 -- Sept 2025}
+    \resumeItemListStart
+      \resumeItem{Implemented Multi-Layer Activation Steering (MLAS) on Gemma-2-2b-it via TransformerLens hooks across 26 layers; \textbf{reduced sycophancy from 78\% $\to$ 0\%} with only a 3.75\% accuracy trade-off. Team of 4.}
+      \resumeItem{Co-engineered Sparse Activation Fusion pipeline (HuggingFace Transformers + Sparse Autoencoders); reduced sycophancy 63\% $\to$ 39\%. Eval on StrategyQA, GSM8K, MMLU, SVAMP. Accepted at \textbf{NeurIPS 2025 Workshop on Mechanistic Interpretability} (co-first author).}
+    \resumeItemListEnd
+
+  \resumeSubheading{Undergraduate Research Assistant}{Schenectady, NY}
+    {Union College Department of Computer Science}{Jan 2025 -- Present}
+    \resumeItemListStart
+      \resumeItem{Translated $\sim$729 Brent equations into $\sim$130,000 CNF clauses to model 3$\times$3 matrix multiplication as a SAT problem; re-derived Laderman's 23-product algorithm via custom NumPy tensor framework + Python multiprocessing harness.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS & PRESENTATIONS-----------
+\section{Publications \& Presentations}
+\resumeSubHeadingListStart
+  \resumeSubheading{Publication}{}{}{}
+  \vspace{-1.5em}
+  \resumeItemListStart
+    \resumeItem{Adityo, N.*, Min, P. P.*, \textbf{Paudel, A.*}, Rufail, A.*, Zhu, A.*, et al.\ (2025). Mitigating Sycophancy in Language Models via Sparse Activation Fusion and Multi-Layer Activation Steering. \textit{\textbf{NeurIPS 2025 Workshop on Mechanistic Interpretability}}. *Equal contribution. [\href{https://openreview.net/pdf?id=BCS7HHInC2}{PDF}]}
+  \resumeItemListEnd
+  \resumeSubheading{Poster}{}{}{}
+  \vspace{-1.5em}
+  \resumeItemListStart
+    \resumeItem{\textit{Finding Tensor Rank.} Union College Undergraduate Summer Research Poster Session, Schenectady, NY (July 24, 2024). Co-authors: S.\ Kulkarni, B.\ Flaherty. Adviser: Dr.\ Matthew Anderson.}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {\textbf{CreateStory} $|$ \href{https://github.com/Avi161/CreateStory}{\underline{GitHub}} $|$ \href{https://createstory.onrender.com/}{\underline{Live}} $|$ \textit{Node.js, Express, MongoDB, Socket.IO}}{2025}
+    \resumeItemListStart
+      \resumeItem{Full-stack storytelling app with REST API + EJS frontend. Real-time collaboration via Socket.IO (\textbf{$<$200ms latency} for 10 concurrent editors). Deployed on Render with CI/CD \& MongoDB Atlas. \textbf{75+ stories in public beta.}}
+    \resumeItemListEnd
+  \resumeProjectHeading
+    {\textbf{FloodNet: Multi-Modal Disaster Prediction} $|$ \href{https://github.com/Avi161/AI4ALL-5A}{\underline{GitHub}} $|$ \textit{PyTorch, CNN}}{2025}
+    \resumeItemListStart
+      \resumeItem{Fused Sentinel-1 (SAR) and Sentinel-2 (optical) satellite imagery for flood detection. \textbf{91.5\% accuracy, 0.979 AUC, 92.7\% recall} on SEN12-FLOOD. 3-layer CNN with custom preprocessing (log-scale SAR + min-max optical).}
+    \resumeItemListEnd
+  \resumeProjectHeading
+    {\textbf{AI Summarizer \& Translator} $|$ \href{https://github.com/Avi161/AI-Summariser-and-Translator}{\underline{GitHub}} $|$ \textit{Chrome Extension, GPT-4o}}{2024}
+    \resumeItemListStart
+      \resumeItem{Chrome extension summarizing and translating web content across 10 languages. Secure token handling, client-side rate limiting, Tailwind CSS UI.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}, itemsep=-3pt]
+  \small{
+    \item{\textbf{Languages:} Python, C/C++, Java, JavaScript/TypeScript, Swift, SQL}
+    \item{\textbf{Web Development:} React, Node.js, Express, Flask, Tailwind CSS, REST APIs, Socket.IO, MongoDB, MySQL, PostgreSQL}
+    \item{\textbf{Tools:} Git/GitHub, Docker, Arduino, Claude Code, CI/CD (Render + MongoDB Atlas)}
+    \item{\textbf{ML \& Data Science:} PyTorch, HuggingFace Transformers, TransformerLens, NumPy, scikit-learn, TensorFlow, Pandas}
+  }
+\end{itemize}
+
+%-----------PROFESSIONAL & LEADERSHIP EXPERIENCE-----------
+\section{Professional \& Leadership Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading{Calculus Tutor}{Schenectady, NY}
+    {Union College Calculus Help Center}{Sept 2025 -- Present}
+    \resumeItemListStart
+      \resumeItem{Led weekly sessions for \textbf{200+ students} across pre-calculus, single-variable, and vector calculus; created visual aids for integration, partial derivatives, and multivariable optimization.}
+    \resumeItemListEnd
+
+  \resumeSubheading{President, Badminton Club}{Schenectady, NY}
+    {Union College Athletics}{Jan 2025 -- Present}
+    \resumeItemListStart
+      \resumeItem{Grew club to \textbf{30+ active members}; organized weekly practices, termly sign-up events, and on-campus tournaments.}
+    \resumeItemListEnd
+
+  \resumeSubheading{Web Development \& Leadership Intern}{Remote}
+    {Nobel Navigators}{June 2024 -- Aug 2024}
+    \resumeItemListStart
+      \resumeItem{Built WordPress site on AI presented to 65+ members; co-facilitated 12 training sessions for 40+ interns on web development — every intern shipped their own website by program end.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\end{document}
